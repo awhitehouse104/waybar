@@ -1,0 +1,120 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "spacing": 4,
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-center": ["clock"],
+    "modules-right": ["custom/media", "pulseaudio", "battery", "tray", "custom/wlogout"],
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "format-icons": {
+            "active": "",
+            "default": ""
+        },
+        "on-click": "activate",
+        "sort-by-number": true,
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": []
+        }
+    },
+    "hyprland/window": {
+        "max-length": 60,
+        "separate-outputs": true
+    },
+    "custom/separator": {
+        "format": "|",
+        "tooltip": false
+    },
+    "custom/fuzzel": {
+        "format": "",
+        "on-click": "fuzzel",
+        "tooltip": false
+    },
+    "custom/firefox": {
+        "format": "",
+        "on-click": "brave-browser",
+        "tooltip": false
+    },
+    "custom/kitty": {
+        "format": "",
+        "on-click": "kitty",
+        "tooltip": false
+    },
+    "custom/thunar": {
+        "format": "{icon}",
+        "format-icons": [""],
+        "on-click": "thunar",
+        "tooltip": false
+    },
+    "custom/obsidian": {
+        "format": "",
+        "on-click": "flatpak run md.obsidian.Obsidian",
+        "tooltip": false
+    },
+    "custom/spotify": {
+        "format": "",
+        "on-click": "flatpak run com.spotify.Client",
+        "tooltip": false
+    },
+    "clock": {
+        "format": "{:%I:%M %p}",
+        "format-alt": "{:%Y-%m-%d}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "<span font='Font Awesome 6 Free Solid'>{icon}</span> {capacity}%",
+        "format-charging": "<span font='Font Awesome 6 Free Solid'></span> {capacity}%",
+        "format-plugged": "<span font='Font Awesome 6 Free Solid'></span> {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "on-click": "tlpui"
+    },
+    "pulseaudio": {
+        "format": "<span font='Font Awesome 6 Free Solid'>{icon}</span> {volume}%",
+        "format-muted": "<span font='Font Awesome 6 Free Solid'> </span>Muted",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/brightness": {
+        "format": "<span font='Font Awesome 6 Free Solid'>{icon}</span> {}%",
+        "format-icons": ["", ""],
+        "exec": "light -G | awk '{printf \"%d\\n\", $1}'",
+        "return-type": "int",
+        "interval": 1,
+        "on-scroll-up": "light -A 5",
+        "on-scroll-down": "light -U 5"
+    },
+    "tray": {
+        "spacing": 10
+    },
+    "custom/wlogout": {
+        "format": "",
+        "on-click": "wlogout --protocol layer-shell -b 3 -T 275 -B 275 -L 500 -R 500",
+        "tooltip": false
+    },
+    "custom/media": {
+        "format": "<span font='Font Awesome 6 Free Solid'>{icon}</span> {}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": ""
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null",
+        "on-click": "playerctl play-pause",
+        "on-click-right": "playerctl next",
+        "on-click-middle": "playerctl previous",
+        "interval": 1
+    }
+}

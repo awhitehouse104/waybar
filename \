@@ -1,0 +1,99 @@
+/* General Styles */
+* {
+    font-family: "Roboto", sans-serif;
+    color: #a9b1d6;
+    background: #1a1b26;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+
+#waybar {
+    background: #1a1b26;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px;
+}
+
+#clock, #battery, #pulseaudio, #custom-wlogout, #hyprland-workspaces, #tray {
+    border-radius: 3px;
+    padding: 5px;
+}
+
+#clock:hover, #battery:hover, #pulseaudio:hover, #custom-wlogout:hover, #hyprland-workspaces:hover, #tray:hover {
+    background: #2a2b3a;
+}
+
+/* Workspaces */
+#workspaces button {
+    padding: 5px;
+    background: transparent;
+}
+
+#workspaces button:hover {
+  background: transparent;
+}
+
+#workspaces button.active {
+}
+
+/* Clock */
+#clock {
+    background: transparent;
+}
+
+/* Battery */
+#battery {
+    background: transparent;
+}
+
+#battery.critical {
+    color: #f7768e;
+}
+
+#battery.warning {
+    color: #e0af68;
+}
+
+/* Pulseaudio */
+#pulseaudio {
+    background: transparent;
+}
+
+/* Custom Logout */
+#custom-wlogout {
+    background: transparent;
+}
+
+/* Tray */
+#tray > .waybar-tray-icon {
+    margin: 0 5px;
+}
+
+#tray > .waybar-tray-icon:hover {
+    background: #2a2b3a;
+    border-radius: 3px;
+}
+
+/* Tooltip */
+.tooltip {
+    font-size: 12px;
+    background: #2a2b3a;
+    color: #c0caf5;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+/* Icon Spacing */
+#pulseaudio, #battery, #custom-wlogout, #hyprland-workspaces button {
+    margin-right: 5px;
+}
+
+/* Additional Alignments for Consistency */
+#modules-right, #modules-left, #modules-center {
+    margin-right: 10px;
+}
+
