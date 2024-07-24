@@ -7,8 +7,8 @@
 }
 
 window#waybar {
-    background: #353535;
-    color: #D3DAE3;
+    background: #1A1B26;
+    color: #A9B1D6;
 }
 
 #workspaces {
@@ -19,16 +19,16 @@ window#waybar {
 #workspaces button {
     font-size: 15px;
     padding: 0 5px;
-    color: #D3DAE3;
+    color: #A9B1D6;
 }
 
 #workspaces button:hover {
-    background: rgba(211, 218, 227, 0.1);
+    background: rgba(169, 177, 214, 0.1);
 }
 
 #workspaces button.active {
-    background: rgba(211, 218, 227, 0.1);
-    box-shadow: inset 0 -2px 0 #D3DAE3;
+    background: rgba(169, 177, 214, 0.1);
+    box-shadow: inset 0 -2px 0 #A9B1D6;
 }
 
 #custom-separator,
@@ -39,7 +39,7 @@ window#waybar {
 #custom-obsidian,
 #custom-spotify {
   padding: 0 5px;
-  color: #D3DAE3;
+  color: #A9B1D6;
   font-size: 15px;
 }
 
@@ -53,7 +53,7 @@ window#waybar {
 }
 
 #custom-separator {
-  color: #888A85;
+  color: #737aa2;
   margin-top: -3px;
 }
 
@@ -76,11 +76,11 @@ window#waybar {
 #pulseaudio,
 #custom-brightness,
 #custom-media {
-    color: #D3DAE3;
+    color: #A9B1D6;
 }
 
 #pulseaudio.muted {
-    color: #555753;
+    color: #565f89;
 }
 
 #tray { 
@@ -90,7 +90,7 @@ window#waybar {
 
 #custom-wlogout {
     font-family: "Font Awesome 6 Free Solid";
-    color: #D3DAE3;
+    color: #A9B1D6;
     margin-right: 5px;
 }
 
@@ -100,14 +100,13 @@ window#waybar {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: #EF2929;
+    background-color: #eb4d4b;
 }
 
 #tray {
-    color: #D3DAE3;
+    color: #A9B1D6;
 }
 
 #tray > * {
-    color: #D3DAE3;
+    color: #A9B1D6;
 }
-
