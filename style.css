@@ -1,79 +1,99 @@
 * {
-  border: none;
-  border-radius: 0;
-  font-family: "JetBrains Mono", monospace;
-  font-size: 15px;
-  min-height: 0;
+  font-family: "JetBrains Mono Nerd Font", sans-serif;
+  font-size: 14px;
 }
 
 window#waybar {
-  background: #1a1b26;
+  background: rgba(26, 27, 38, 0.9);
   color: #a9b1d6;
 }
 
-#workspaces {
-  background: #16161e;
-  margin: 5px 2.5px 5px 10px;
-  border-radius: 5px;
+.modules-left {
+  background: rgba(65, 72, 104, 0.5);
+  border-radius: 15px;
+  margin: 5px 5px 5px 10px;
+  padding: 2px 5px;
 }
 
 #workspaces button {
-  padding: 0 10px;
-  border-radius: 5px;
+  padding: 0 5px;
+  color: #a9b1d6;
 }
 
 #workspaces button.active {
-  background: #3d59a1;
+  color: #7aa2f7;
 }
 
-#clock,
-#battery,
-#pulseaudio,
-#custom-media,
-#tray,
-#custom-wlogout,
+#workspaces button:hover {
+  background: rgba(122, 162, 247, 0);
+  box-shadow: inherit;
+  text-shadow: inherit;
+}
+
 #window {
-  background: #16161e;
   padding: 0 10px;
-  margin: 5px 2.5px;
-  border-radius: 5px;
 }
 
-#window {
-  color: #c0caf5;
+#clock {
+  background: rgba(122, 162, 247, 0.2);
+  color: #7aa2f7;
+  border-radius: 15px;
+  padding: 2px 10px;
+  margin: 5px;
 }
 
-window#waybar.empty #window {
-    background: transparent;
+#custom-media,
+#custom-brightness,
+#pulseaudio,
+#battery,
+#tray,
+#custom-wlogout {
+  padding: 2px 10px;
+  margin: 5px 2px;
+  border-radius: 15px;
 }
 
-#battery {
-  color: #1a1b26;
-  background: #9ece6a;
-}
-
-#battery.charging {
-  color: #1a1b26;
-  background: #73daca;
-}
-
-#battery.warning:not(.charging) {
-  background: #f7768e;
-  color: #1a1b26;
+#custom-media {
+  background: rgba(187, 154, 247, 0.2);
+  color: #bb9af7;
 }
 
 #pulseaudio {
-  color: #1a1b26;
-  background: #e0af68;
+  background: rgba(115, 218, 202, 0.2);
+  color: #73daca;
 }
 
-#pulseaudio.muted {
-  color: #787c99;
+#battery {
+  background: rgba(224, 175, 104, 0.2);
+  color: #e0af68;
+}
+
+#battery.warning {
+  background: rgba(247, 118, 142, 0.2);
+  color: #f7768e;
+}
+
+#battery.critical {
+  background: #f7768e;
+  color: #1a1b26;
+}
+
+#tray {
+  background: rgba(125, 207, 255, 0.2);
 }
 
 #custom-wlogout {
-  color: #1a1b26;
-  background: #f7768e;
+  background: rgba(247, 118, 142, 0.2);
+  color: #f7768e;
+  padding-right: 15px;
   margin-right: 10px;
 }
 
+tooltip {
+  background: #1a1b26;
+  border: 1px solid #7aa2f7;
+}
+
+tooltip label {
+  color: #a9b1d6;
+}
