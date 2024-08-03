@@ -5,14 +5,18 @@ import sys
 
 def get_media_info():
     try:
-        metadata = subprocess.check_output(['playerctl', 'metadata', '--format', '{{ artist }} - {{ title }}'])
-        status = subprocess.check_output(['playerctl', 'status']).decode('utf-8').strip()
-        player = subprocess.check_output(['playerctl', '--list-all']).decode('utf-8').strip().split('\n')[0]
+        player_list = subprocess.check_output(['playerctl', '--list-all']).decode('utf-8').strip().split('\n')
+        if not player_list:
+            return None
+
+        player = player_list[0]  # Take the first available player
+        metadata = subprocess.check_output(['playerctl', 'metadata', '--format', '{{ artist }} - {{ title }}'], universal_newlines=True)
+        status = subprocess.check_output(['playerctl', 'status'], universal_newlines=True).strip()
     except subprocess.CalledProcessError:
         return None
 
     return {
-        'text': metadata.decode('utf-8').strip(),
+        'text': metadata.strip(),
         'class': 'custom-' + player,
         'alt': player
     }
