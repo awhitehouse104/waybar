@@ -1,31 +1,29 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 36,
+    "height": 32,
     "spacing": 4,
-    "margin-top": 6,
-    "margin-left": 10,
-    "margin-right": 10,
+    "margin-top": 0,
+    "margin-left": 0,
+    "margin-right": 0,
     "modules-left": ["hyprland/workspaces", "hyprland/window"],
     "modules-center": ["clock"],
-    "modules-right": ["custom/media", "pulseaudio", "battery", "tray", "custom/wlogout"],
+    "modules-right": ["custom/media", "battery", "tray", "custom/wlogout"],
     "hyprland/workspaces": {
-        "format": "{icon}",
+        "format": "{icon} <sup>{windows}</sup>",
         "format-icons": {
-            "active": "",
-            "default": ""
+            "active": "",
+            "default": "",
+            "empty": ""
         },
         "on-click": "activate",
         "sort-by-number": true,
         "persistent-workspaces": {
-            "1": [],
-            "2": [],
-            "3": [],
-            "4": [],
-            "5": []
-        }
+            "*": 6,
+        },
     },
     "hyprland/window": {
+        "icon": true,
         "max-length": 60,
         "separate-outputs": true
     },
@@ -65,8 +63,7 @@
         "tooltip": false
     },
     "clock": {
-        "format": "{:%I:%M %p}",
-        "format-alt": "{:%Y-%m-%d}",
+        "format": "{:%a %m/%d | %I:%M %p}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
     "battery": {
@@ -98,15 +95,15 @@
         "on-scroll-down": "light -U 5"
     },
     "tray": {
-        "spacing": 8
+        "spacing": 5
     },
     "custom/wlogout": {
         "format": "",
-        "on-click": "wlogout --protocol layer-shell -b 3 -T 275 -B 275 -L 500 -R 500",
+        "on-click": "$HOME/.config/waybar/powermenu.sh",
         "tooltip": false
     },
     "custom/media": {
-        "format": "<span font='Font Awesome 6 Free Solid'>{icon}</span> {}",
+        "format": "<span font='Font Awesome 6 Free Solid'>{icon}</span> {0}",
         "return-type": "json",
         "max-length": 40,
         "format-icons": {

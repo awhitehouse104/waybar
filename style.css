@@ -4,37 +4,34 @@
 }
 
 window#waybar {
-  background: rgba(26, 27, 38, 1);
-  border-radius: 5px;
-  border: 1px solid rgba(169, 177, 214, 0.5);
-  color: #a9b1d6;
+  background: rgba(39, 46, 51, 1);
+  color: #9DA9A0;
 }
 
 .modules-left {
-  margin: 5px;
+  margin: 5px 3px 5px 5px;
 }
 
 #workspaces button {
-  padding: 0 4px;
-  color: #a9b1d6;
+  padding: 0 2px;
+  color: #9DA9A0;
 }
 
 #workspaces button.active {
-  color: #7aa2f7;
+  color: #D3C6AA;
 }
 
 #workspaces button:hover {
-  background: rgba(122, 162, 247, 0);
   box-shadow: inherit;
   text-shadow: inherit;
 }
 
 #window {
-  padding: 0 10px;
+  padding: 0 5px;
 }
 
 #clock {
-  margin: 5px;
+  margin: 5px 3px;
 }
 
 #custom-media,
@@ -43,7 +40,7 @@ window#waybar {
 #battery,
 #tray,
 #custom-wlogout {
-  margin: 5px;
+  margin: 5px 3px;
 }
 
 #custom-media {
@@ -65,14 +62,9 @@ window#waybar {
 }
 
 #custom-wlogout {
-  margin-right: 20px;
-}
-
-tooltip {
-  background: #1a1b26;
-  border: 1px solid #7aa2f7;
+  margin-right: 15px;
 }
 
 tooltip label {
-  color: #a9b1d6;
+  color: #9DA9A0;
 }

@@ -26,5 +26,5 @@ media_info = get_media_info()
 if media_info is not None:
     print(json.dumps(media_info))
 else:
-    print(json.dumps({'text': 'No media'}))
+    print(json.dumps({'text': 'No Media'}))
 sys.stdout.flush()
